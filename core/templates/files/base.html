@@ -1,0 +1,341 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charge | {% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'files/styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'files/styles/bootstrap.min.css' %}" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="{% static 'files/styles/bootstrap-icons.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'files/styles/nouislider.min.css' %}" />
+</head>
+<body>
+    <div class="shop-bg-filter w-100 position-fixed top-0"></div>
+    <div class="container-fluid p-0">
+
+
+      {% block content %}
+      {% endblock %}
+
+    <!-- Bottom Navigation - Mobile Only -->
+    <nav class="navbar fixed-bottom navbar-light bg-white shadow-lg d-md-none">
+        <div class="container-fluid px-0">
+            <div class="row w-100 gx-0">
+                <div class="col-4">
+                    <a href="{% url 'Select_Vehicle' %}" class="btn w-100 d-flex flex-column align-items-center py-2">
+                        <i class="fa-solid fa-car mb-1"></i>
+                        <small class="text-muted">Book Trip</small>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="btn w-100 d-flex flex-column align-items-center py-2" data-bs-toggle="offcanvas" data-bs-target="#SigninOffcanvas">
+                        <i class="fa-solid fa-user-circle mb-1"></i>
+                        <small class="text-muted">Sign In</small>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="btn w-100 d-flex flex-column align-items-center py-2" data-bs-toggle="offcanvas" data-bs-target="#moreOffcanvas">
+                        <i class="fa-solid fa-bars mb-1"></i>
+                        <small class="text-muted">More</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+<!-- Signin Offcanvas -->
+<div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="SigninOffcanvas" data-bs-backdrop="false">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">More Options</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">Settings</a>
+            <a href="#" class="list-group-item list-group-item-action">Help Center</a>
+            <a href="#" class="list-group-item list-group-item-action">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+<!-- More Options Offcanvas -->
+<div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="moreOffcanvas" data-bs-backdrop="false">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">More Options</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">Settings</a>
+            <a href="#" class="list-group-item list-group-item-action">Help Center</a>
+            <a href="#" class="list-group-item list-group-item-action">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+
+    <style>
+        .offcanvas-bottom {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        .offcanvas.h-auto {
+            max-height: 75vh;
+            height: 75vh;
+        }
+        .modal-content {
+            border-radius: 1rem;
+            border: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    </style>
+
+    <script>
+        // Update button targets to use offcanvas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update navbar buttons
+            const navButtons = document.querySelectorAll('.navbar.fixed-bottom a');
+            navButtons[2]?.setAttribute('data-bs-toggle', 'offcanvas');
+            navButtons[2]?.setAttribute('data-bs-target', '#moreOffcanvas');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Footer start -->
+      <div class="newsletter px-3">
+        <div class="container px-3 py-4 rounded-4">
+          <div class="row">
+            <div class="flex-grow-1 col-md-8 my-3">
+              <h1 class="text-white">Don't miss latest news.</h1>
+            </div>
+            <div class="col-md-4 my-3">
+              <div class="w-100 my-2">
+                <input
+                  type="email"
+                  class="form-control rounded-pill px-5 py-2"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="w-100 my-100">
+                <button class="btn bg-white rounded-pill px-5 w-100 py-2">
+                  Join newsletter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-5">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="my-2 col-12 col-md-4">
+              <a href="#" class="text-black fw-bold text-decoration-none fs-3"
+                >CHARGE.CLUB</a
+              >
+              <p class="text-secondary mb-3">
+                We have clothes that will give you a new style and you will be
+                proud of yourself and your purchase. From female to male.
+              </p>
+              <div class="social d-flex mt-5">
+                <a
+                  href="https://sirmerdas.ir"
+                  target="_blank"
+                  class="social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
+                  ><i class="bi bi-globe"></i
+                ></a>
+                <a
+                  href="https://github.com/sirmerdas"
+                  target="_blank"
+                  class="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
+                  ><i class="bi bi-github"></i
+                ></a>
+                <a
+                  href="https://t.me/sirmerdas"
+                  target="_blank"
+                  class="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
+                  ><i class="bi bi-telegram"></i
+                ></a>
+                <a
+                  href="https://instagram.com/sirmerdas"
+                  target="_blank"
+                  class="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </div>
+            </div>
+            <div class="footer-links my-2 col-6 col-md-2">
+              <h1 class="fs-3 mb-3">Company</h1>
+              <ul class="list-unstyled p-0">
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                    >About us
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                    >Feature
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                    >Jobs</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-links my-2 col-6 col-md-2">
+              <h1 class="fs-3 mb-3">Help</h1>
+              <ul class="list-unstyled p-0">
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Call center
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Shipment methods
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Privacy
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Terms of use
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-links my-2 col-6 col-md-2">
+              <h1 class="fs-3 mb-3">FAQ</h1>
+              <ul class="list-unstyled p-0">
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Account
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Track orders
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Orders
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Payments
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-links my-2 col-6 col-md-2">
+              <h1 class="fs-3 mb-3">Resources</h1>
+              <ul class="list-unstyled p-0">
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Counseling
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    youtube channel
+                  </a>
+                </li>
+                <li class="my-2">
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="shop.html"
+                  >
+                    Info
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <hr class="my-3" />
+            <div class="d-flex justify-content-center text-secondary">
+              All Rights Reserverd 2023 &copy;
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer end -->
+    </div>
+  </body>
+
+  <script src="{% static 'files/Js/utils/popper.min.js' %}"></script>
+  <script src="{% static 'files/Js/utils/bootstrap.min.js' %}"></script>
+  <script src="{% static 'files/Js/utils/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'files/Js/utils/wNumb.min.js' %}"></script>
+  <script src="{% static 'files/Js/utils/nouislider.min.js' %}"></script>
+  <script src="{% static 'files/Js/utils/slider.js' %}"></script>
+  <script src="{% static 'files/Js/app.js' %}"></script>
+  <script type="module" src="{% static 'files/Js/shop.js' %}"></script>
+  <script type="module" src="{% static 'files/Js/main.js' %}"></script>
+  <script type="module" src="{% static 'files/Js/product.js' %}"></script>
+  <script type="module" src="{% static 'files/Js/cart.js' %}"></script>
+</html>

@@ -1,0 +1,305 @@
+{% extends 'files/base.html' %}
+{% load static %}
+
+{% block title %}Researvation{% endblock %}
+{% block content %}
+      <!-- Content start -->
+      <section class="container mb-5">
+        <hr />
+
+        <div class="breadcrumb">
+          <p class="fs-6">
+            <span
+              ><a href="index.html" class="text-decoration-none text-secondary"
+                >Home</a
+              ></span
+            ><span>&nbsp; <i class="bi bi-chevron-right"></i> &nbsp;</span
+            ><span>Cart</span>
+          </p>
+        </div>
+
+        <div class="cart">
+          <div class="cart-header">
+            <h1 class="fw-bold fs-1">Cart</h1>
+          </div>
+
+          <div class="row">
+            <div class="cart-main col-md-7 my-2">
+              <div
+                class="rounded-4 border border-1 py-3 px-4 position-relative overflow-x-hidden"
+              >
+                <div
+                  class="cart-item position-relative rounded-4 px-1 my-2 py-1"
+                >
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <a href="product.html" target="_blank">
+                        <img
+                          loading="lazy"
+                          class="img-fluid w-100 rounded-3"
+                          src="src/images/products/shirt-3.png"
+                          alt="cart-item"
+                        />
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <div class="d-flex w-100 align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-4 fw-bold">
+                            <a
+                              href="product.html"
+                              class="text-decoration-none text-black"
+                              target="_blank"
+                            >
+                              Men shirt
+                            </a>
+                          </h1>
+                        </div>
+                        <div>
+                          <button class="btn fs-4 text-danger del-btn">
+                            <i class="bi bi-trash-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Size : </span
+                          ><span class="text-secondary">L</span>
+                        </p>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Color : </span
+                          ><span class="text-secondary">Blue</span>
+                        </p>
+                      </div>
+                      <div class="w-100 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-5 fw-bold">$300</h1>
+                        </div>
+                        <div
+                          class="d-flex p-1 cart-item-controller rounded-pill fs-6 align-items-center"
+                        >
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-plus"></i>
+                            </button>
+                          </div>
+                          <div class="mx-1 text-secondary">1</div>
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-dash"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cart-item position-relative rounded-4 px-1 my-2 py-1"
+                >
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <a href="product.html" target="_blank">
+                        <img
+                          loading="lazy"
+                          class="img-fluid w-100 rounded-3"
+                          src="src/images/products/shirt-4.png"
+                          alt="cart-item"
+                        />
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <div class="d-flex w-100 align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-4 fw-bold">
+                            <a
+                              href="product.html"
+                              class="text-decoration-none text-black"
+                              target="_blank"
+                            >
+                              Red men shirt
+                            </a>
+                          </h1>
+                        </div>
+                        <div>
+                          <button class="btn fs-4 text-danger del-btn">
+                            <i class="bi bi-trash-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Size : </span
+                          ><span class="text-secondary">XL</span>
+                        </p>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Color : </span
+                          ><span class="text-secondary">Red</span>
+                        </p>
+                      </div>
+                      <div class="w-100 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-5 fw-bold">$500</h1>
+                        </div>
+                        <div
+                          class="d-flex p-1 cart-item-controller rounded-pill fs-6 align-items-center"
+                        >
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-plus"></i>
+                            </button>
+                          </div>
+                          <div class="mx-1 text-secondary">1</div>
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-dash"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="cart-item position-relative rounded-4 px-1 my-2 py-1"
+                >
+                  <div class="row align-items-center">
+                    <div class="col-3">
+                      <a href="product.html" target="_blank">
+                        <img
+                          loading="lazy"
+                          class="img-fluid w-100 rounded-3"
+                          src="src/images/products/shirt-5.png"
+                          alt="cart-item"
+                        />
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <div class="d-flex w-100 align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-4 fw-bold">
+                            <a
+                              href="product.html"
+                              class="text-decoration-none text-black"
+                              target="_blank"
+                            >
+                              men shirt
+                            </a>
+                          </h1>
+                        </div>
+                        <div>
+                          <button class="btn fs-4 text-danger del-btn">
+                            <i class="bi bi-trash-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Size : </span
+                          ><span class="text-secondary">XXL</span>
+                        </p>
+                      </div>
+                      <div class="w-100">
+                        <p class="fs-6">
+                          <span>Color : </span
+                          ><span class="text-secondary">White</span>
+                        </p>
+                      </div>
+                      <div class="w-100 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                          <h1 class="fs-5 fw-bold">$360</h1>
+                        </div>
+                        <div
+                          class="d-flex p-1 cart-item-controller rounded-pill fs-6 align-items-center"
+                        >
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-plus"></i>
+                            </button>
+                          </div>
+                          <div class="mx-1 text-secondary">3</div>
+                          <div class="mx-1">
+                            <button class="btn fs-5 rounded-pill">
+                              <i class="bi bi-dash"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 my-2">
+              <div class="order-summery border border-1 rounded-4 py-3 px-4">
+                <div class="order-summery">
+                  <h1 class="fs-4 fw-bold">Order summary</h1>
+                </div>
+                <div class="order-price">
+                  <div class="w-100 d-flex mt-4 my-2 fs-5">
+                    <div class="flex-grow-1">Total price</div>
+                    <div class="text-secondary">$1160</div>
+                  </div>
+                  <div class="w-100 d-flex my-3 fs-5">
+                    <div class="flex-grow-1">Discount(20%)</div>
+                    <div class="text-secondary">
+                      <span class="text-danger">- $232</span>
+                    </div>
+                  </div>
+                  <div class="w-100 d-flex my-3 fs-5">
+                    <div class="flex-grow-1">Shipment cost</div>
+                    <div class="text-secondary">$30</div>
+                  </div>
+                  <hr />
+                  <div class="w-100 d-flex my-3 fs-5 fw-bold">
+                    <div class="flex-grow-1">Total</div>
+                    <div class="text-secondary">$958</div>
+                  </div>
+                  <div class="w-100 d-flex mt-4 my-2 fs-5">
+                    <div
+                      class="flex-grow-1 coupon-input mx-1 rounded-pill d-flex px-3"
+                    >
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <i class="bi bi-tag"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <input
+                          type="text"
+                          placeholder="Enter your coupon"
+                          class="border-0 h-100 w-100 rounded-pill fs-6 px-2"
+                        />
+                      </div>
+                    </div>
+                    <div class="text-secondary mx-1">
+                      <button
+                        class="btn main-btn rounded-pill px-4 text-white py-2"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-100 mt-4 my-2 fs-5">
+                    <a
+                      href="#"
+                      class="btn main-btn text-white w-100 px-6 py-3 rounded-pill"
+                    >
+                      Pay &nbsp;
+                      <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content end -->
+
+{% endblock %}
+

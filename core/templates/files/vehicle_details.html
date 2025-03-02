@@ -1,0 +1,168 @@
+{% extends 'files/base.html' %}
+{% load static %}
+
+{% block title %}Confirm Details{% endblock %}
+{% block content %}
+      <!-- Content start -->
+      <!-- Contents start -->
+      <section class="container mb-5">
+        <hr />
+
+        <div class="row align-items-stretch justify-content-center">
+          <div class="col-12"></div>
+          <div class="col-1 d-none d-lg-block">
+            <div class="image-menu d-flex flex-column">
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-1.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 gallery-img"
+              />
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-2.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 opacity-50 gallery-img"
+              />
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-4.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 opacity-50 gallery-img"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div
+              class="rounded-4 overflow-hidden position-relative main-product-img"
+            >
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-1.png' %}"
+                alt="product"
+                class="w-100 rounded-4 my-2 product-image overflow-hidden"
+              />
+            </div>
+          </div>
+          <div class="col-12 row d-flex d-lg-none">
+            <div class="col-4">
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-1.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 gallery-img"
+              />
+            </div>
+            <div class="col-4">
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-2.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 opacity-50 gallery-img"
+              />
+            </div>
+            <div class="col-4">
+              <img
+                loading="lazy"
+                src="{% static 'files/images/products/t-shirt-4.png' %}"
+                alt="product"
+                class="w-100 rounded-4 pointer-cursor my-2 opacity-50 gallery-img"
+              />
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="h-100 py-2">
+              <div class="my-2">
+                <h1 class="fs-2 fw-bold">Green men T-shirt</h1>
+              </div>
+              <div class="my-2">
+                <span class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i
+                ></span>
+                <span class="text-secondary">4.5/</span>
+                <span>5</span>
+              </div>
+              <div class="my-2">
+                <h1 class="fs-4 fw-bold">$296</h1>
+              </div>
+              <div class="my-2">
+                <p class="text-secondary">
+                  Go green with our eco-friendly and stylish green shirts! Made
+                  from sustainable materials, these shirts are not only
+                  fashion-forward but also contribute to a greener planet.
+                  Embrace your love for nature while looking effortlessly chic
+                  in our vibrant green shirts.
+                </p>
+              </div>
+              <hr />
+              <div class="my-2">
+                <p class="text-secondary">Select size.</p>
+                <button
+                  class="btn main-btn text-white rounded-pill my-2 mx-2 bg-alternative"
+                >
+                  Large
+                </button>
+                <button
+                  class="btn rounded-pill my-2 mx-2 bg-alternative text-secondary"
+                >
+                  XX-Large
+                </button>
+                <button
+                  class="btn rounded-pill my-2 mx-2 bg-alternative text-secondary"
+                >
+                  X-Large
+                </button>
+              </div>
+              <hr />
+              <div class="my-2">
+                <p class="text-secondary">Select</p>
+                <button
+                  class="btn main-btn text-white rounded-pill my-2 mx-2 bg-alternative"
+                >
+                  Male
+                </button>
+                <button
+                  class="btn rounded-pill my-2 mx-2 bg-alternative text-secondary"
+                >
+                  Female
+                </button>
+              </div>
+              <hr />
+              <div class="my-2 row">
+                <div class="col-md-9 px-2">
+                  <button
+                    class="btn main-btn py-2 text-white rounded-pill w-100 my-2 mx-2 bg-alternative"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+                <div class="col-md-3 px-2 text-center">
+                  <div
+                    class="d-flex justify-content-center p-1 cart-item-controller rounded-pill fs-6 align-items-center"
+                  >
+                    <div class="mx-1">
+                      <button class="btn fs-5 rounded-pill">
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                    <div class="mx-1 text-secondary">1</div>
+                    <div class="mx-1">
+                      <button class="btn fs-5 rounded-pill">
+                        <i class="bi bi-dash"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contents end -->
+
+{% endblock %}      
