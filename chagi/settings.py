@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'core_lister',
 ]
 
 MIDDLEWARE = [
@@ -90,6 +91,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTH_USER_MODEL = 'core_lister.User'  # Replace 'your_app' with the actual app name
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
